@@ -81,7 +81,7 @@ def get_cards(conn, set_id):
     ''', (set_id,))
 
     rows = cursor.fetchall()
-    cards = [(row[0], row[1] for row in rows)]
+    cards = [(row[0], row[1]) for row in rows]
 
     return cards
 
