@@ -41,6 +41,23 @@ if __name__ == '__main__':
     ttk.Entry(create_set_frame, textvariable=set_name_var, width=30).pack(pady=5, padx=5)
 
     #BUTTON TO ADD A WORD TO THE SET
+    ttk.Button(create_set_frame, text='Add Word').pack(pady=10, padx=5)
 
+    #BUTTON TO SAVE THE SET
+    ttk.Button(create_set_frame, text='Save Set').pack(pady=10, padx=5)
+
+    #CREATING SET SELECTION TAB
+    set_selection_frame = ttk.Frame(notebook)
+    notebook.add(set_selection_frame, text='Select Set')
+
+    #COMBOBOX FOR SELECTING EXISTING SETS
+    sets_combobox = ttk.Combobox(set_selection_frame, state='readonly')
+    sets_combobox.pack(padx=5, pady=5)
+
+    #BUTTON TO SELECT SET
+    ttk.Button(set_selection_frame, text='Select Set').pack(padx=5, pady=5)
+
+    #BUTTON TO DELETE SET
+    ttk.Button(set_selection_frame, text='Deleet Set').pack(padx=5, pady=5)
 
     main_window.mainloop()
