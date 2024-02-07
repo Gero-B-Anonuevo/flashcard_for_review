@@ -48,7 +48,7 @@ def add_card(conn, set_id, word, definition):
 
     #EXECUTE SQL QUERY TO INSERT A NEW FLASHCARD INTO THE DATABASE
     cursor.execute('''
-        INSERT INTO flashcards (set_id, word, definition)
+        INSERT INTO flashcard (set_id, word, definition)
         VALUES (?, ?, ?)
     ''', (set_id, word, definition))
 
@@ -76,7 +76,7 @@ def get_cards(conn, set_id):
     cursor = conn.cursor()
 
     cursor.execute('''
-        SELECT word, definition FROM flashcards
+        SELECT word, definition FROM flashcard
         WHERE set_id = ?
     ''', (set_id,))
 
