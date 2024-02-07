@@ -23,5 +23,24 @@ if __name__ == '__main__':
 
     #NOTEBOOK WIDGET FOR MANAGING TABS
     notebook = ttk.Notebook(main_window)
+    notebook.pack(fill='both', expand=True)
+
+    #CREATE SET CREATION TAB
+    create_set_frame = ttk.Frame(notebook)
+    notebook.add(create_set_frame, text='Create Set')
+
+    #LABEL AND ENTRY WIDGETS FOR SET NAME AND DEFINITION
+    ttk.Label(create_set_frame, text='Set Name:').pack(padx=5, pady=5)
+    ttk.Entry(create_set_frame, textvariable=set_name_var, width=30).pack(pady=5, padx=5)
+
+    ttk.Label(create_set_frame, text='Word:').pack(padx=5, pady=5)
+    ttk.Entry(create_set_frame, textvariable=set_name_var, width=30).pack(pady=5, padx=5)
+
+
+    ttk.Label(create_set_frame, text='Definition:').pack(padx=5, pady=5)
+    ttk.Entry(create_set_frame, textvariable=set_name_var, width=30).pack(pady=5, padx=5)
+
+    #BUTTON TO ADD A WORD TO THE SET
+
 
     main_window.mainloop()
